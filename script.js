@@ -7,9 +7,9 @@ form.addEventListener('submit', function(event){
     // previne o comportamento padrão do evento submit do js, ou seja impede o recarregamento da pagina
     event.preventDefault();
         
-    const peso = parseFloat(document.getElementById('peso').value);
+    const peso = parseInt(document.getElementById('peso').value);
 
-    const altura = parseFloat(document.getElementById('altura').value);
+    const altura = parseInt(document.getElementById('altura').value);
 
     if(peso>0 && altura > 0){
     const imc = peso / (altura*altura);
