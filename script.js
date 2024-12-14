@@ -7,7 +7,7 @@ form.addEventListener('submit', function(event){
     // previne o comportamento padrão do evento submit do js, ou seja impede o recarregamento da pagina
     event.preventDefault();
         
-    const peso = parseInt(document.getElementById('peso').value);
+    const peso = parseFloat(document.getElementById('peso').value);
 
     const altura = parseFloat(document.getElementById('altura').value);
 
