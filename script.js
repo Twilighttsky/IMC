@@ -9,10 +9,10 @@ form.addEventListener('submit', function(event){
         
     const peso = parseInt(document.getElementById('peso').value);
 
-    const altura = parseInt(document.getElementById('altura').value);
+    const altura = parseFloat(document.getElementById('altura').value);
 
     if(peso>0 && altura > 0){
-    const imc = peso / (altura*altura);
+    const imc = parseFloat(peso / (altura*altura));
 
     document.getElementById('infos').classList.remove('hidden');
 
