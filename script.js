@@ -7,10 +7,11 @@ form.addEventListener('submit', function(event){
     // previne o comportamento padrão do evento submit do js, ou seja impede o recarregamento da pagina
     event.preventDefault();
         
-    const peso = document.getElementById('weight').value;
+    const peso = parseFloat(document.getElementById('weight').value);
 
-    const altura = document.getElementById('height').value;
+    const altura = parseFloat(document.getElementById('height').value);
 
+    if(peso>0 && altura > 0){
     const imc = peso / (altura*altura);
 
     document.getElementById('infos').classList.remove('hidden');
@@ -59,6 +60,10 @@ form.addEventListener('submit', function(event){
     campoImc.textContent = imc.toFixed(2);
 
     document.getElementById('description').textContent = descricao
+
+    } else {
+alert("Por favor insira valores acima de 0");
+    }
 
 
 });
